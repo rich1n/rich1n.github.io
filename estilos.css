@@ -1,0 +1,202 @@
+body {
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0px;
+}
+
+.container {
+    width: 70%; /*el container lo mete entre un ancho de pantalla de 80% para que el logo y el menu no queden muy pegado de cada lado  */
+    margin: 0 auto;
+}
+
+header {
+    width: 100%; /*este header es para que exista un background al 100% y una position fixed*/
+    background: #4a69bd;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    padding: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header img {
+    width: 20%;
+}
+
+nav {
+    float: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block; /* Pone los elementos uno al lado del otro  */
+    margin-left: 50px;
+    padding-top: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* quitar el subrayado del texto con lin  */
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #aaa;
+}
+
+
+header::after {
+    content: ''; /* NPI  */
+    display: table;
+    clear: both;
+}
+
+
+
+nav ul li a::before {
+    content: ''; /*Contenido adicional si se pusiera algun texto */
+    display: block; /* las lineas aparecen arriba de la lista  */
+    height: 5px;
+    background: #0a3d62;
+    
+    width: 0; /* Esto desaparece las lineas que crearon el display block  */
+    transition: all ease-in 250ms; /* leer e inverstigar sobre este all ease in y otras opciones  */
+    top: 18px; /* NPI  */
+
+}
+
+nav ul li a:hover::before { /*Es un hover befores al before para que realice una accion cuando se le haga un hover  */
+    width: 100%; /* cuando se coloca al 100% el width aparece las lineas cuando se realice el hover con el mouse */
+}
+
+/* AQUI TERMINA EL HEADER */
+
+
+.segment1 {
+    margin: 0;
+    background-image: url(Miranda_en_la_Carraca.jpg);
+    height: 100vh;
+    background-size: cover;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    border: 2px solid #fff;
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: #FFF;
+    position: relative;
+    top: -350px;
+}
+
+.segment2 {
+    margin: 0;
+    background: linear-gradient(black 50%, #b71540);
+    height: 40vh;
+    background-size: cover;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.bio {
+    font-family: 'Crimson Text', serif;
+    width: 20%;
+    font-size: 20px;
+    border: 2px solid #e1b12c;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(black 45%, #0a3d62);
+    color: #FFF;
+    position: relative;
+    top: -80px;
+    left: 140px;
+}
+
+.segment3 {
+    margin: 0;
+    background: -moz-linear-gradient(#b71540 20%, #fbc531 55%);
+    height: 40vh;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.material {
+    font-family: 'Crimson Text', serif;
+    font-size: 20px;
+    border: 2px solid #e1b12c;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #b71540 20%, #353b48 60%);
+    opacity: 90%;
+    color: #FFF;
+    position: relative;
+    top: 10px;
+    left: 500px;
+}
+
+span {
+    opacity: 40%;
+}
+
+.bio1 {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+article {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+
+}
+p {
+    font-size: 20px;;
+}
+
+.retrato {
+    width: 30%;
+    float: left;
+    margin: 30px;
+    padding: 0;
+    background-size: contain;
+}
+
+p::first-letter {
+    Color: red;
+    font-size: 34px;
+    font-weight: bold;
+
+}

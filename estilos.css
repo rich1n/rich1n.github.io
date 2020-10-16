@@ -1,202 +1,346 @@
 body {
-    font-family: 'Crimson Text', serif;
-    font-weight: 400;
-    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;  
+    overflow: hidden;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
-h1, h2 {
-    margin: 0px;
+.nav-up {
+    top: -40px;
 }
 
-.container {
-    width: 70%; /*el container lo mete entre un ancho de pantalla de 80% para que el logo y el menu no queden muy pegado de cada lado  */
-    margin: 0 auto;
-}
-
-header {
-    width: 100%; /*este header es para que exista un background al 100% y una position fixed*/
-    background: #4a69bd;
-    position: relative;
-}
-
-.logo {
-    float: left;
-    padding: 10px 0px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-header img {
-    width: 20%;
-}
-
-nav {
-    float: center;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
+li {
     list-style: none;
 }
-
-nav li {
-    display: inline-block; /* Pone los elementos uno al lado del otro  */
-    margin-left: 50px;
-    padding-top: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none; /* quitar el subrayado del texto con lin  */
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #aaa;
-}
-
-
-header::after {
-    content: ''; /* NPI  */
+ 
+/*------------------------ 2 Home ------------------------*/
+.main {
+    background: grey;
+    background-size: cover;
     display: table;
-    clear: both;
-}
-
-
-
-nav ul li a::before {
-    content: ''; /*Contenido adicional si se pusiera algun texto */
-    display: block; /* las lineas aparecen arriba de la lista  */
-    height: 5px;
-    background: #0a3d62;
-    
-    width: 0; /* Esto desaparece las lineas que crearon el display block  */
-    transition: all ease-in 250ms; /* leer e inverstigar sobre este all ease in y otras opciones  */
-    top: 18px; /* NPI  */
-
-}
-
-nav ul li a:hover::before { /*Es un hover befores al before para que realice una accion cuando se le haga un hover  */
-    width: 100%; /* cuando se coloca al 100% el width aparece las lineas cuando se realice el hover con el mouse */
-}
-
-/* AQUI TERMINA EL HEADER */
-
-
-.segment1 {
-    margin: 0;
-    background-image: url(Miranda_en_la_Carraca.jpg);
-    height: 100vh;
-    background-size: cover;
-    
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.title {
-    font-family: 'Crimson Text', serif;
-    font-size: 20px;
-    border: 2px solid #fff;
-    padding: 20px;
-    text-align: center;
-    background: #333;
-    color: #FFF;
+    width: 100%;
     position: relative;
-    top: -350px;
 }
 
-.segment2 {
-    margin: 0;
-    background: linear-gradient(black 50%, #b71540);
-    height: 40vh;
+.main:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+    opacity: .85;
+    position: absolute;
+     
+}
+    .nav-icon{
+        margin-left: 1800px;
+        margin-top: -540px;
+}
+
+.main-title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+/* Productividad | Minimalismo | Creatividad */
+.hello {
+    color: red;
+    line-height: 51px;
+    font-size: 120%;
+
+}
+
+
+.main-content {
+    padding: 0 60px;
+    vertical-align: middle;
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+    .logo a{
+        color: orange;
+        margin-left: 30px;         
+        border: 1px solid white;
+        background: white;
+        font-size: 30px;
+    }
+  
+    .logo a:hover{
+        text-decoration: none;
+    }
+
+/*------------------------ 2.1 Full Menu ------------------------*/
+
+.full-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     background-size: cover;
+    opacity: 0;
+    visibility: hidden;   
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+/* Full Menu */
+
+.full-menu .modal-close {
+    /* 'X' icon */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding: 50px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background:rgba(0, 0, 0, 0.3) url(cd-icon-close.svg)no-repeat center center;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;     
+    transform: scale(0);
+    visibility 0s 0.3s, opacity 0.3s 0s;
+     
+    transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
+}
+
+.no-touch .full-menu .modal-close:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.full-menu.visible {
+    background-size: 100%;
+    opacity: 1;
+    visibility: visible;   
+    transition: opacity 0.7s, visibility 0s;
+}
+
+.full-menu.visible .fullmenu-content {
+    -webkit-overflow-scrolling: touch;
+}
+
+.full-menu.visible .modal-close {
+    visibility: visible;
+    opacity: 1;    
+    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;     
+    transform: scale(1);
+}
+
+@media only screen and (min-width: 1100px) {
+    .full-menu .fullmenu-content {
+        padding: 6em 5%;
+    }
+    .full-menu .modal-close {
+        height: 60px;
+        width: 60px;
+    }
+    .full-menu p {
+        font-size: 25px;
+    }
+}
+
+.cd-transition-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.cd-transition-layer .bg-layer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-2%);   
+    transform: translateY(-50%) translateX(-2%);     
+    height: 100%;
+    /* our sprite is composed of 25 frames */
+    width: 2500%;
+    background: url(ink.png) no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.cd-transition-layer.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cd-transition-layer.opening .bg-layer {     
+    animation: cd-sequence 1.0s steps(24);     
+    animation-fill-mode: forwards;
+}
+
+.cd-transition-layer.closing .bg-layer {     
+    animation: cd-sequence-reverse 1.0s steps(24);    
+    animation-fill-mode: forwards;
+}
+
+.no-cssanimations .cd-transition-layer {
+    display: none;
+}
+
+ 
+@keyframes cd-sequence {
+    0% {
+        transform: translateY(-50%) translateX(-2%);
+    }
+    100% {        
+        transform: translateY(-50%) translateX(-98%);
+    }
+}
+
     
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
+    
+  
+@keyframes cd-sequence-reverse {
+    0% {
+         
+        transform: translateY(-50%) translateX(-98%);
+    }
+    100% {
+         
+        transform: translateY(-50%) translateX(-2%);
+    }
 }
 
-.bio {
-    font-family: 'Crimson Text', serif;
-    width: 20%;
-    font-size: 20px;
-    border: 2px solid #e1b12c;
-    padding: 20px;
+
+/*------------------------ 2.2 Header ------------------------*/
+
+.full-menu .fullmenu-content {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.page-menu {
+    display: table-cell;
+    vertical-align: middle;
     text-align: center;
-    background: linear-gradient(black 45%, #0a3d62);
-    color: #FFF;
+}
+
+.page-menu li {
+    line-height: 50px;
+    margin-left: -25px;
+}
+
+.page-menu li:last-child {
+    line-height: 90px;
+    }
+
+.page-menu li a {
+    color: #fff;
+    font-size: 26px;
     position: relative;
-    top: -80px;
-    left: 140px;
+    font-weight: 500;
+     
 }
 
-.segment3 {
-    margin: 0;
-    background: -moz-linear-gradient(#b71540 20%, #fbc531 55%);
-    height: 40vh;
-    background-size: cover;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.social img {
+    width: 15px;
 }
 
-.material {
-    font-family: 'Crimson Text', serif;
-    font-size: 20px;
-    border: 2px solid #e1b12c;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(120deg, #b71540 20%, #353b48 60%);
-    opacity: 90%;
-    color: #FFF;
-    position: relative;
-    top: 10px;
-    left: 500px;
+.main .social {
+    margin-top: 30px;
 }
 
-span {
-    opacity: 40%;
+.social a {
+    margin-right: 20px;
+    
 }
 
-.bio1 {
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-}
-article {
-    width: 80%;
-    margin: auto;
-    padding: 40px;
-
-}
-p {
-    font-size: 20px;;
+.social a:hover img {
+    opacity: .6;
+    transition: all ease 0.3s;
 }
 
-.retrato {
-    width: 30%;
-    float: left;
-    margin: 30px;
-    padding: 0;
-    background-size: contain;
+.social a:last-child {
+    margin-right: 0px;
 }
 
-p::first-letter {
-    Color: red;
-    font-size: 34px;
-    font-weight: bold;
+ /*iconos pantalla negra*/
 
+.social2 img {
+    width: 20px;
+    margin-top: 400px;
+}
+
+.social2 a {
+    margin-right: 60px;
+    
+}
+
+.social2 a:hover img {
+    opacity: .6;
+    transition: all ease 0.3s;
+}
+
+.social2 a:last-child {
+    margin-right: 0px;
+}
+
+ 
+
+header {
+    position: fixed;
+    padding: 30px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
+.nav-icon {
+    width: 23px;
+    height: 18px;
+    position: relative;    
+    transform: rotate(0deg);     
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;    
+    transform: rotate(0deg);   
+    transition: .25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+    top: 0px;     
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(2) {
+    top: 6px;    
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(3) {
+    top: 12px;     
+    transform-origin: left center;
+    width: 60%;
+    right: 0 !important;
+}
+
+.nav-icon:hover span:nth-child(3) {
+    width: 100%;
 }

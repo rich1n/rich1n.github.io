@@ -13,6 +13,19 @@ li {
     list-style: none;
 }
  
+.richin {
+    position: relative;
+    top: 95%;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+}
+
+.richin a {
+    text-decoration: unset;
+    list-style: none;
+}
+
 /*------------------------ 2 Home ------------------------*/
 .main {
     background: grey;
@@ -63,10 +76,9 @@ li {
 }
 
     .logo a{
-        color: orange;
+        color: brown;
         margin-left: 30px;         
-        border: 1px solid white;
-        background: white;
+        background: none;
         font-size: 30px;
     }
   
@@ -109,7 +121,7 @@ li {
     visibility: hidden;
     opacity: 0;     
     transform: scale(0);
-    visibility 0s 0.3s, opacity 0.3s 0s;
+    visibility: 0s 0.3s, opacity 0.3s 0s;
      
     transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
 }

@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;  
     overflow: hidden;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 .nav-up {
@@ -12,24 +12,10 @@ body {
 li {
     list-style: none;
 }
- 
-.richin {
-    position: relative;
-    top: 95%;
-    font-weight: 500;
-    color: white;
-    font-size: 14px;
-}
-
-.richin a {
-    text-decoration: unset;
-    list-style: none;
-}
 
 /*------------------------ 2 Home ------------------------*/
 .main {
-    background: grey;
-    background-size: cover;
+    background-image: url(images/catar.jpg); 
     display: table;
     width: 100%;
     position: relative;
@@ -53,10 +39,16 @@ li {
 .main-title {
     font-size: 24px;
     line-height: 28px;
-    color: #fff;
-    font-weight: 400;
+    color: black;
+    font-weight: 300;
+    font-weight: bold;
     text-align: center;
+    position: relative;
+    top: 25%;
+    left: 25%;
 }
+
+
 /* Productividad | Minimalismo | Creatividad */
 .hello {
     color: red;
@@ -76,14 +68,16 @@ li {
 }
 
     .logo a{
-        color: brown;
+        color: red;
         margin-left: 30px;         
         background: none;
-        font-size: 30px;
+        font-size: 20px;
+        text-decoration: none;
     }
   
     .logo a:hover{
         text-decoration: none;
+        color: gold;
     }
 
 /*------------------------ 2.1 Full Menu ------------------------*/

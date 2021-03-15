@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+
+    <!--Estilos-->
+    <style>
+      .map {
+        height: 400px;
+        width: 60%;
+        margin: 5%;
+      }
+    </style>
+
+<!--Include OpenLayers-->
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+
+    <title>Abacus v1.1</title>
+  </head>
+
+  <body>
+    <h2>Ubicación</h2>
+    <!--<div> to contain the map-->
+    <div id="map" class="map"></div>
+
+    <!--JavaScript to create a simple map-->
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([-66.863, 10.49026]),
+          zoom: 18
+        })
+      });
+    </script>
+
+</body>
+</html>

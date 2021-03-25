@@ -1,6 +1,7 @@
 # rich1n.github.io
 Repositorio de mi Landing page GitHub
 
+### DISCLAIMER: No sé que significa esta palabra pero esta información la saqué no me acuerdo de qué repo de GitHub; pero aún así, disfruten del contenido... *sonido de grillos*...
 
 # ¿Cómo utilizar GitHub?
 

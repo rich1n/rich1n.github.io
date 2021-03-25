@@ -3,19 +3,34 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
-}
+    background: #EFF4E4; 
 
-.nav-up {
-    top: -40px;
 }
 
 li {
     list-style: none;
 }
 
+h1 {
+    color:#053542;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #E69896;
+}
+
+a:hover {
+    color: #053542;
+}
+
+h2 {
+    font-size: 90px;
+}
+
 /*------------------------ 2 Home ------------------------*/
 .main {
-    background-image: url(images/catar.jpg); 
     display: table;
     width: 100%;
     position: relative;
@@ -31,10 +46,6 @@ li {
     position: absolute;
      
 }
-    .nav-icon{
-        margin-left: 1800px;
-        margin-top: -540px;
-}
 
 .main-title {
     font-size: 24px;
@@ -49,304 +60,31 @@ li {
 }
 
 
-/* Productividad | Minimalismo | Creatividad */
 .hello {
     color: red;
     line-height: 51px;
-    font-size: 120%;
+    font-size: 100%;
 
 }
-
 
 .main-content {
-    padding: 0 60px;
+    padding: 10px 60px;
     vertical-align: middle;
     display: table-cell;
     height: 100%;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
-    .logo a{
-        color: red;
-        margin-left: 30px;         
-        background: none;
-        font-size: 20px;
-        text-decoration: none;
-    }
-  
-    .logo a:hover{
-        text-decoration: none;
-        color: gold;
-    }
-
-/*------------------------ 2.1 Full Menu ------------------------*/
-
-.full-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background-size: cover;
-    opacity: 0;
-    visibility: hidden;   
-    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+.main-content h2 {
+    padding: 60px 30px;
+    text-align: left;
 }
-
-/* Full Menu */
-
-.full-menu .modal-close {
-    /* 'X' icon */
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    padding: 50px;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    background:rgba(0, 0, 0, 0.3) url(cd-icon-close.svg)no-repeat center center;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-    visibility: hidden;
-    opacity: 0;     
-    transform: scale(0);
-    visibility: 0s 0.3s, opacity 0.3s 0s;
-     
-    transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
-}
-
-.no-touch .full-menu .modal-close:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.full-menu.visible {
-    background-size: 100%;
-    opacity: 1;
-    visibility: visible;   
-    transition: opacity 0.7s, visibility 0s;
-}
-
-.full-menu.visible .fullmenu-content {
-    -webkit-overflow-scrolling: touch;
-}
-
-.full-menu.visible .modal-close {
-    visibility: visible;
-    opacity: 1;    
-    transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;     
-    transform: scale(1);
-}
-
-@media only screen and (min-width: 1100px) {
-    .full-menu .fullmenu-content {
-        padding: 6em 5%;
-    }
-    .full-menu .modal-close {
-        height: 60px;
-        width: 60px;
-    }
-    .full-menu p {
-        font-size: 25px;
-    }
-}
-
-.cd-transition-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-}
-
-.cd-transition-layer .bg-layer {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateY(-50%) translateX(-2%);   
-    transform: translateY(-50%) translateX(-2%);     
-    height: 100%;
-    /* our sprite is composed of 25 frames */
-    width: 2500%;
-    background: url(ink.png) no-repeat 0 0;
-    background-size: 100% 100%;
-}
-
-.cd-transition-layer.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.cd-transition-layer.opening .bg-layer {     
-    animation: cd-sequence 1.0s steps(24);     
-    animation-fill-mode: forwards;
-}
-
-.cd-transition-layer.closing .bg-layer {     
-    animation: cd-sequence-reverse 1.0s steps(24);    
-    animation-fill-mode: forwards;
-}
-
-.no-cssanimations .cd-transition-layer {
-    display: none;
-}
-
- 
-@keyframes cd-sequence {
-    0% {
-        transform: translateY(-50%) translateX(-2%);
-    }
-    100% {        
-        transform: translateY(-50%) translateX(-98%);
-    }
-}
-
-    
-    
-  
-@keyframes cd-sequence-reverse {
-    0% {
-         
-        transform: translateY(-50%) translateX(-98%);
-    }
-    100% {
-         
-        transform: translateY(-50%) translateX(-2%);
-    }
-}
-
-
-/*------------------------ 2.2 Header ------------------------*/
-
-.full-menu .fullmenu-content {
-    height: 100%;
-    width: 100%;
-    display: table;
-}
-
-.page-menu {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.page-menu li {
-    line-height: 50px;
-    margin-left: -25px;
-}
-
-.page-menu li:last-child {
-    line-height: 90px;
-    }
-
-.page-menu li a {
-    color: #fff;
-    font-size: 26px;
-    position: relative;
-    font-weight: 500;
-     
-}
-
-.social img {
-    width: 15px;
-}
-
-.main .social {
-    margin-top: 30px;
-}
-
-.social a {
-    margin-right: 20px;
-    
-}
-
-.social a:hover img {
-    opacity: .6;
-    transition: all ease 0.3s;
-}
-
-.social a:last-child {
-    margin-right: 0px;
-}
-
- /*iconos pantalla negra*/
-
-.social2 img {
-    width: 20px;
-    margin-top: 400px;
-}
-
-.social2 a {
-    margin-right: 60px;
-    
-}
-
-.social2 a:hover img {
-    opacity: .6;
-    transition: all ease 0.3s;
-}
-
-.social2 a:last-child {
-    margin-right: 0px;
-}
-
- 
 
 header {
     position: fixed;
     padding: 30px;
     top: 0;
-    width: 100%;
+    left: 80%;
     z-index: 2;
-}
-
-
-.nav-icon {
-    width: 23px;
-    height: 18px;
-    position: relative;    
-    transform: rotate(0deg);     
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    margin-top: 7px;
-}
-
-.nav-icon span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #fff;
-    opacity: 1;    
-    transform: rotate(0deg);   
-    transition: .25s ease-in-out;
-}
-
-.nav-icon span:nth-child(1) {
-    top: 0px;     
-    transform-origin: left center;
-}
-
-.nav-icon span:nth-child(2) {
-    top: 6px;    
-    transform-origin: left center;
-}
-
-.nav-icon span:nth-child(3) {
-    top: 12px;     
-    transform-origin: left center;
-    width: 60%;
-    right: 0 !important;
-}
-
-.nav-icon:hover span:nth-child(3) {
-    width: 100%;
 }

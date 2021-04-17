@@ -19,3 +19,7 @@ Tomando un espesso como ejemplo; podemos medir el peso del café seco antes de l
 Ese resultado lo calculamos para saber cuánto hay de sólidos solubles disueltos en la taza.
 
 un litro de un café filtrado con un TDS al 1.2% nos indica que hay un 98.8% de agua en ese filtrado; el resto, son los sólidos
+
+Un espresso es la bebida que tiene más altas concentraciones de TDS; puede llegar a superar un 1000% en concentración comparando con un filtrado. por esa razón en los filtrados se pueden detectar con mayor facilidad los sabores y aromas complejos. 1000% mayor cantidad de aromas volátiles.
+
+Cuando hay un aumento en los TDS, la transparencia del café para detectar otros sabores agradables se atenúan ya que los sabores. cuando hay una disminución de tds, la bebida se sentirá débil y floja; hay poca concentración de sabores que el café arroja.

@@ -1,16 +1,8 @@
 # rich1n.github.io
-Repositorio de mi Landing page GitHub
-
-### DISCLAIMER: No sé que significa esta palabra pero esta información la saqué no me acuerdo de qué repo de GitHub; pero aún así, disfruten del contenido... *sonido de grillos*...
-
-# ¿Cómo utilizar GitHub?
+Repositorio de mi Landing page
 
 Indice:
-  - [¿Qué es GitHub?](#qu%C3%A9-es-github)
-    + [¿Qué es Git?](#qu%C3%A9-es-git)
-    + [¿Y el Hub?](#y-el-hub)
-    + [¿Entonces...?](#entonces)
-    + [¿Cómo hago una cuenta?](#c%C3%B3mo-hago-una-cuenta)
+  - [¿GitHub?](#qu%C3%A9-es-github)
   - [Repositorios](#repositorios)
     + [Crea un repositorio](#crea-un-repositorio)
     + [Encabezado](#encabezado)
@@ -31,11 +23,10 @@ Indice:
 
 --------------------------------------------------------------------------------
 
-# ¿Qué es GitHub?
+## ¿Qué es GitHub?
 Se puede entender como una palabra compuesta: **Git** y **Hub**.
 
-
-## ¿Git?
+### ¿Git?
 Una herramienta que facilita la colaboración:
 > Imagínate que tú y tu amigo Pedro deciden dibujar juntos en la escuela, pero quieren
 > terminar el dibujo cada quien en su casa. La maestra saca 2 fotocopias de lo
@@ -71,11 +62,9 @@ Ese sería un flujo de trabajo con **Git**. Las palabras que están en
 [Guía de estilo de Git](https://github.com/agis-/git-style-guide)
 
 
-## ¿Hub?
+### ¿Hub?
 Un espacio *en linea* para tener un respaldo de tus proyectos.
 
-
-## ¿What...?
 **GitHub** es *un espacio en linea para tener un respaldo de tus proyectos* que
 usen *Git*, enfocado a **proyectos de programación con código abierto**.
 
@@ -89,15 +78,6 @@ Crear una cuenta en **GitHub** es gratuito, siempre y cuando tus proyectos sean
 abiertos al público. Si quieres restringir el acceso a tus proyectos puedes
 pagar por ello una subscripción mensual.
 
-
-## ¿Cómo hago una cuenta?
-Ingresa a la página principal de [Github](https://github.com) y en los campos
-de texto llena tu `nombre de usuario`, `correo electrónico`, y `contraseña`.
-
-![Página de inicio de GitHub](/images/github-home.png)
-
-
-## ¿Y ahora qué hago?
 Si ya tienes un proyecto en el que estés trabajando, ve al repositorio.
 El enlace se debe de ver algo así:
 `http://github.com/usuario/nombre-del-repositorio`
@@ -105,7 +85,7 @@ O puedes [crear un repositorio](#crea-un-repositorio)
 
 --------------------------------------------------------------------------------
 
-# Repositorios
+## Repositorios
 Es el lugar donde están todos los archivos del proyecto, incluyendo la
 documentación. Los repositorios pueden tener multiples colaboradores y pueden
 ser **publicos** (que el acceso esté **abierto** a cualquiera) o **privados**
@@ -118,7 +98,7 @@ Repasaremos la interfaz del repositorio, empezando de arriba hacia abajo.
 Pero primero, crearemos uno.
 
 
-## Crea un repositorio
+### Crea un repositorio
 En la esquina superior derecha, dale click en el ícono de `+`, seguido
 de `New repository`:
 ![Github new repository](images/github-new-repository.png)
@@ -152,7 +132,7 @@ Vienen varios campos que tienes que llenar:
 *Si tienes duda respecto a las licencias de uso, visita:* http://choosealicense.com/
 
 
-## Encabezado
+### Encabezado
 ![Encabezado](/images/github-repository-header.png)
 
 Contiene el **propietario** y el **nombre** del repositorio.
@@ -180,7 +160,7 @@ Y una barra de navegación:
 Vamos a explorar cada una de las pestañas, empezando por **Code**.
 
 
-### Panel de Código
+#### Panel de Código
 ![Panel de código](/images/github-code-panel.png)
 
 Contiene una descripción corta del proyecto.
@@ -188,7 +168,7 @@ Algunas métricas y acciones de **Git**.
 Y un listado de archivos que contiene el repositorio.
 
 
-## README
+### README
 Es el documento que da la **bienvenida** a tu projecto.
 
 ![README en GitHub](/images/github-readme.png)
@@ -204,7 +184,7 @@ como un simple texto, se le agrega formato utilizando
 [Markdown](https://es.wikipedia.org/wiki/Markdown) (de ahí viene la extención de archivo `.md`).
 
 
-### Desarrollo guiado por README
+#### Desarrollo guiado por README
 El README es la [piedra angular](https://es.wikipedia.org/wiki/Piedra_angular) de un proyecto.
 
 ![Mind blown](http://i.giphy.com/V0IdVIIW1y5d6.gif)
@@ -221,7 +201,7 @@ Además, es un esquema bastante sencillo para **aterrizar las ideas**.
 Facilita que se pueda **discutir** e **iterar** sin perder el rumbo.
 
 
-### Contenido de un README
+#### Contenido de un README
 Un buen README debe tener al menos estos elementos:
 
   - **Descripción**: ¿De qué trata el repositorio? ¿Por qué me debería importar?
@@ -281,7 +261,7 @@ Una lista de READMEs para ejemplificar casos de buenas prácticas.
 
 --------------------------------------------------------------------------------
 
-# Gestionar un repositorio
+## Gestionar un repositorio
 
 > La mayoría de los problemas de nuestro trabajo no son tanto técnicos como sociológicos en su naturaleza.
 >   - [Peopleware: Productive Projects and Teams](http://www.amazon.com/Peopleware-Productive-Projects-Teams-Edition/dp/0321934113)
@@ -313,7 +293,7 @@ Algunas herramientas de  **GitHub** te permiten tener todo centralizado:
     implementar mejoras, etc.)
 
 
-## Issues
+### Issues
 Si le damos click en la pestaña de *Issues*:
 ![Github issues tab](/images/github-header-navbar-issues.png)
 
@@ -337,7 +317,7 @@ La pantalla se ve algo así, ahí pueden agregar, editar, y eliminar etiquetas:
 ![Github Labels](/images/github-labels.png)
 
 
-## Milestones
+### Milestones
 En sí, es un conjunto de tareas. Puede ser un lanzamiento, una
 módulo del proyecto, una revisión, etc. Incluyen una **descripción**,
 **fecha**, y las **tareas** que se necesitan cumplir para lograr ese objetivo.
@@ -361,7 +341,7 @@ la salud de un proyecto. Integra con medida.*
 
 --------------------------------------------------------------------------------
 
-# Documentación
+## Documentación
 > Estarás usando tu c­­ódigo dentro de 6 meses.
 >   - [Write the docs](http://docs.writethedocs.org)
 
@@ -380,7 +360,7 @@ Una vez que esté más estructurado el proyecto, puedes expandir la documentaci�
 a una [Wiki](#wiki).
 
 
-## Wiki
+### Wiki
 Es una de las herramientas que proveé GitHub. Un lugar centralizado para
 documentación.
 
@@ -393,7 +373,7 @@ Está compuesta de páginas, como un libro.
 
 --------------------------------------------------------------------------------
 
-# Fuentes documentales
+## Fuentes documentales
   - [Explicación sencilla de Git](https://www.reddit.com/r/explainlikeimfive/comments/jgoxv/eli5_how_do_you_use_git_and_github/)
   - [Awesome GitHub](https://github.com/phillipadsmith/awesome-github)
   - [Awesome README](https://github.com/matiassingers/awesome-readme)
@@ -407,8 +387,13 @@ Texto Guía tomado de este [Repositorio](https://github.com/CodeandoMonterrey/Gi
 
 --------------------------------------------------------------------------------
 
-# Licencia de uso
+## Licencia de uso
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Github-Simple</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/mroutis/" property="cc:attributionName" rel="cc:attributionURL">MrOutis</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/mroutis/github-simple" rel="dct:source">https://github.com/MrOutis/GitHub-Simple</a>.
 
 
+
+
+## Comandos Básicos de GIT
+
+Proximamente

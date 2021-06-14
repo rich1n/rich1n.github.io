@@ -12,10 +12,6 @@ span {
 color: #e43f5a;
 }
 
-* {
-  box-sizing: border-box
-}
-
 /*NAVBAR*/
 .navbar {
   background-color: #000839;

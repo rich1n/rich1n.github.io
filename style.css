@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -198,9 +202,7 @@ h4 {
 .job-title {
   float: right;
 }
-* {
-  border:  solid red 1px;
-}
+
 /*PROJECTS*/
 .project-card {
   display: flex;

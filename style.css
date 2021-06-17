@@ -4,12 +4,16 @@ body {
   margin: 0;
 }
 
-span {
-color: #e43f5a;
-}
-
 * {
   box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+span {
+color: #e43f5a;
 }
 
 /*NAVBAR*/
@@ -29,6 +33,10 @@ color: #e43f5a;
   text-decoration: none;
 }
 
+.navbar2 a {
+  color:  white;
+  right:  200px;
+}
 .anchor {
   display: block;
   position: relative;
@@ -174,6 +182,17 @@ h2 {
   flex: 1 1 auto;
 }
 
+.card-content a:link {
+  text-decoration: none;
+  color: red;
+}
+
+.card-content a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+
 h4 {
   margin: 0;
   font-weight: 400;
@@ -193,6 +212,7 @@ h4 {
   border-radius: 5px;
   margin-bottom: 30px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+  justify-content: center;
 }
 
 .project-image {

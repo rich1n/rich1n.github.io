@@ -222,40 +222,38 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <form id="contactForm" action="https://send.pageclip.co/I55Qa3Id6oFIr126NmRKjsJ5N1ABCQbC" class="pageclip-form" method="post">
+                        <form action="https://send.pageclip.co/I55Qa3Id6oFIr126NmRKjsJ5N1ABCQbC" class="pageclip-form" method="post">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Introduce tu nombre..." data-sb-validations="required" />
-                                <label for="name">Nombre Completo</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Es obligatorio poner tu nombre.</div>
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="nombre@dominio.com" data-sb-validations="required,email" />
-                                <label for="email">Dirección Email</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Un email es obligatorio.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email no valido.</div>
+                                <input class="form-control" id="email" name="email" type="email" placeholder="richin@domain.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Número Telefónico</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Un número teléfonico es obligatorio.</div>
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Escribe tu consulta..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Mensaje</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Es obligatorio escribir un mensaje.</div>
+                                <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                             <!-- Submit success message-->
-                            <!---->
                             <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
-                                    <div class="fw-bolder">¡Gracias por tu mensaje!</div>
-                                    En breve me pondré en contacto contigo.
+                                    <div class="fw-bolder">Thanks for your submission!</div>
+                                    I'll contact you soon!
                                     <br />
                                     <a href="https://rich1n.com">rich1n.com</a>
                                 </div>
@@ -267,8 +265,8 @@
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <div class="d-grid">
-                                <button type="submit" class="pageclip-form__submit btn btn-success btn-xl disabled" id="submitButton" type="submit">
-                                    <spam>Enviar</spam>
+                                <button type="submit" class="pageclip-form__submit btn btn-success">
+                                    <spam>Submit</spam>
                                 </button>
                             </div>
                         </form>

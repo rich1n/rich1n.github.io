@@ -17,33 +17,37 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Bootstrap CDN -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L32VJV3KJC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6B2ER29GTC');
-</script>
-
-<!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-var _smartsupp = _smartsupp || {};
-_smartsupp.key = '687a9a47ee182d3d48afbfbf530b10b5090c65d4';
-window.smartsupp||(function(d) {
-  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-  c.type='text/javascript';c.charset='utf-8';c.async=true;
-  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-})(document);
-</script> 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L32VJV3KJC"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6B2ER29GTC');
+        </script>
+        <!-- Smartsupp Live Chat script -->
+        <script type="text/javascript">
+            var _smartsupp = _smartsupp || {};
+            _smartsupp.key = '687a9a47ee182d3d48afbfbf530b10b5090c65d4';
+            window.smartsupp||(function(d) {
+                var s,c,o=smartsupp=function() { 
+                    o._.push(arguments)};o._=[];
+                    s=d.getElementsByTagName('script')[0];
+                    c=d.createElement('script');
+                    c.type='text/javascript';
+                    c.charset='utf-8';
+                    c.async=true;
+                    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+                })
+            (document);
+        </script> 
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
     </head>
+    
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -74,6 +78,8 @@ window.smartsupp||(function(d) {
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">Web Developer in Caracas, Venezuela.</p>
+                        <button id="btn-login">Moralis Login</button>
+                        <button id="btn-logout">Logout</button>
                     </div>
                 </div>
             </div>
@@ -363,38 +369,46 @@ window.smartsupp||(function(d) {
                 </div>
             </div>
         </section>
-<div id="graphcomment"></div>
-<script type="text/javascript">
-
-  /* - - - CONFIGURATION VARIABLES - - - */
-
-  var __semio__params = {
-    graphcommentId: "rich1n", // make sure the id is yours
-
-    behaviour: {
-      // HIGHLY RECOMMENDED
-      //  uid: "...", // uniq identifer for the comments thread on your page (ex: your page id)
-    },
-
-    // configure your variables here
-
-  }
-
-  /* - - - DON'T EDIT BELOW THIS LINE - - - */
-
-  function __semio__onload() {
-    __semio__gc_graphlogin(__semio__params)
-  }
-
-
-  (function() {
-    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-    gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
-  })();
-  
-
-</script>
+        <div id="graphcomment">
+        </div>
+        <script type="text/javascript">
+        /* - - - CONFIGURATION VARIABLES - - - */
+            var __semio__params = {
+                graphcommentId: "rich1n",
+                behaviour: {
+                },
+            }
+            function __semio__onload() {
+                __semio__gc_graphlogin(__semio__params)
+            }
+            (function() {
+                var gc = document.createElement('script');
+                gc.type = 'text/javascript';
+                gc.async = true;
+                gc.onload = __semio__onload;
+                gc.defer = true;
+                gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+            })
+            ();
+        </script>
+        <script>
+            Moralis.initialize("cOQwkJhYtCuhtrPXuFzVxafuXRoI21d4ZUOHuehx");
+            Moralis.serverURL = "https://53xa7asnur3i.grandmoralis.com:2053/server";    
+            async function login() {
+                let user = Moralis.User.current();
+                if (!user) {
+                    user = await Moralis.authenticate();
+                }
+                console.log("logged in user:", user); 
+            }
+            async function logOut() {
+                await Moralis.User.logOut();
+                console.log("logged out");
+            }
+            document.getElementById("btn-login").onclick = login;
+            document.getElementById("btn-logout").onclick = logOut;
+        </script>  
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - rich1n.com</div></div>
@@ -408,7 +422,7 @@ window.smartsupp||(function(d) {
         <!-- * *                               Pageclip forma de contacto                               * *-->
         <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>

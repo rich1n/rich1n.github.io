@@ -1,8 +1,8 @@
 import Head from "next/head"
 import Footer from "./Footer"
-import DarkMode from "./DarkMode"
 import Link from "next/link"
 import NavLinks from "../data/NavLinks"
+import Sidebar from "./Sidebar"
 
 export default function Layout({ children, title = '', titulo = '', description = '', home }) {
   return (
@@ -21,24 +21,14 @@ export default function Layout({ children, title = '', titulo = '', description 
 						href="/favicon.ico" 
 						/>
 				</Head>
-				<div className="mt-8 flex items-center justify-center text-base leading-5">
-					<div className="hidden sm:block">
-						{NavLinks.map((link) => (
-							<Link
-								key={link.title}
-								href={link.href}
-								className="p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4"
-							>
-								{link.title}
-							</Link>
-						))}
-					</div>
-					<DarkMode />
+				<div className="flex">
+					<Sidebar />
+					<main className="w-full">
+						{children}
+					</main>
 				</div>
-				<main className="mb-auto">
-					{children}
-				</main>
-        <Footer />
+		
+		        <Footer />
 			</div>
 		</>
 	)

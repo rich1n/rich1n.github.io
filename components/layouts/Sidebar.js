@@ -1,8 +1,9 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import DarkMode from './DarkMode';
-import NavLinks from "../data/NavLinks"
+import DarkMode from '../DarkMode';
+import NavLinks from "@//data/NavLinks"
+import FooterSidebar from './FooterSidebar';
 
 export default function Navbar() {
   let pathname = usePathname() || '/';
@@ -30,6 +31,7 @@ export default function Navbar() {
 									))}
                 </div>
                 <DarkMode />
+                <FooterSidebar />
 							</div>
             </div>
           </nav>

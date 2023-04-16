@@ -1,16 +1,13 @@
 import Link from 'next/link'
 import siteMetadata from '@/data/siteMetadata'
-import SocialFooterLinks from './SocialFooterLinks'
+import SocialFooterLinks from './SocialLinksIcons'
 
 export default function Footer() {
   return (
     <footer className='py-2 text-xs flex flex-row justify-between'>
-      <div className='flex space-x-4'>
-        <SocialFooterLinks />
-        <div className="mb-2 flex space-x-2 text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-        </div>
+      <div className="mb-2 flex space-x-2 text-gray-500 dark:text-gray-400">
+        <div>{siteMetadata.author}</div>
+        <div>{`© ${new Date().getFullYear()}`}</div>
       </div>
       <div className="mb-4 text-gray-500 dark:text-gray-400 flex">
         Developed at Home and fully remote by {' '}

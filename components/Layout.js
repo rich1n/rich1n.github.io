@@ -1,9 +1,8 @@
 import Head from "next/head"
 import Footer from "./layouts/Footer"
-import NavLinks from "../data/NavLinks"
 import Sidebar from "./layouts/Sidebar"
 
-export default function Layout({ children, title = '', titulo = '', description = '', home }) {
+export default function Layout({ children, title = '', description = '', home }) {
   return (
 		<>
 			<Head>
@@ -19,7 +18,7 @@ export default function Layout({ children, title = '', titulo = '', description 
 					<Sidebar />
 					<main className="w-full">{children}</main>
 				</div>
-				<hr className="my-4"/>
+				<hr className="border-red-300 dark:border-white my-4"/>
 				<Footer />
 			</div>
 		</>

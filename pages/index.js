@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Richin Portfolio Page?</title>
+        <title>Richin - Portfolio Site</title>
       </Head>
 
         <main>
@@ -21,9 +21,9 @@ export default function Home() {
               Rich1n.com
             </h1>
           </div>
-          <section>
-            <div>
-
+          <section className='flex mx-auto my-12'>
+            <div className='flex mx-auto'>
+              SECCIÓN
             </div>
           </section>
         </main>

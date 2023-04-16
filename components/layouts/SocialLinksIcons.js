@@ -1,8 +1,13 @@
 import siteMetadata from '@/data/siteMetadata'
+import SocialIcon from '@/components/social-icons/index.js'
 
 export default function SocialFooterLinks() {
-  return (
-    <div className='flex space-x-2'>
+
+console.log(SocialIcon)
+	return (
+    <div className='flex space-x-2 my-6'>
+
+<SocialIcon kind="github" href={siteMetadata.github} size="6" />
 			<a kind="mail" href={`mailto:${siteMetadata.email}`} target='_blank' className='hover:scale-110 duration-300'>
 				<svg role="img" fill="currentColor" width={22} height={22} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
 					<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

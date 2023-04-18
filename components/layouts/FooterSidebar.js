@@ -1,4 +1,4 @@
-import SocialFooterLinks from "./SocialLinksIcons"
+import SocialLinksIcons from "./SocialLinksIcons"
 
 export default function FooterBar() {
   return (
@@ -12,7 +12,7 @@ export default function FooterBar() {
 				</button>
 			</div>
 			<div>
-				<SocialFooterLinks />
+				<SocialLinksIcons />
 			</div>
 		</div>        
   )

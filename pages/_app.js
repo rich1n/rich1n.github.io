@@ -14,7 +14,6 @@ export default function App({ Component, pageProps }) {
     <>
       <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
         <Head>
-          <link rel="canonical" href="/" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
         </Head>
         <Layout>

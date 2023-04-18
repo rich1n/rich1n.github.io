@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: 'My Landing Page',
+  title: 'Rich1n Porfolio Website',
   author: 'Richard Rodrigues',
   headerTitle: 'A Portfolio Dev Blog',
   description: 'My Personal Portfolio and starting point to show my stuff',
@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/rich1n/rich1n.github.io',
  // siteLogo: '/static/images/logo.png',
  // image: '/static/images/avatar.png',
- // socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/twitter-card.png',
   email: 'ricard122@gmail.com',
   github: 'https://github.com/rich1n',
   twitter: 'https://twitter.com/Rich1NFT',

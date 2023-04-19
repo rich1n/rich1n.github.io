@@ -3,6 +3,7 @@ import siteMetadata from '@/data/siteMetadata'
 import styles from '@/styles/Home.module.css'
 import { useRouter } from "next/router"
 import { PageSEO } from '@/components/SEO'
+import Layout from '@/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,18 +14,20 @@ export default function Home() {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <main>
-        <div className='container mt-12'>
-          <h1 className='text-3xl text-center text-red-400'>
-            Rich1n.com
-          </h1>
-        </div>
-        <section className='flex mx-auto my-12'>
-          <div className='flex mx-auto'>
-            SECCIÓN
+      <Layout>
+        <main>
+          <div className='container mt-12'>
+            <h1 className='text-3xl text-center text-red-400'>
+              Rich1n.com
+            </h1>
           </div>
-        </section>
-      </main>
+          <section className='flex mx-auto my-12'>
+            <div className='flex mx-auto'>
+              SECCIÓN
+            </div>
+          </section>
+        </main>
+      </Layout>
     </>
   )
 }

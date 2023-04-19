@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function LangBar2() {
 	const router = useRouter();
-  const { locale } = useRouter()
+	  const { locale } = useRouter()
 	const defaultLang = locale === 'es'
 
 	const onChangeLanguage = (lang) => (e) => {
@@ -15,7 +15,7 @@ export default function LangBar2() {
 
 	return (
 		<div className="border-none">
-			<div className="p-1 px-3">
+			<div className="p-1">
 				{ defaultLang ?
 					<button onClick={onChangeLanguage('en')} value='' defaultChecked = { locale === 'es' }>
 						<div className="flex gap-2">

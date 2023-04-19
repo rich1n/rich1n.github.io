@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import DarkMode from './DarkMode';
-import NavLinks from "@//data/NavLinks"
+import NavLinks from "@/data/NavLinks"
 import FooterSidebar from './FooterSidebar';
 import LangBar from './LangBar';
 

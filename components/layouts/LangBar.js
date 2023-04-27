@@ -18,27 +18,14 @@ export default function LangBar2() {
 			<div className="p-1">
 				{ defaultLang ?
 					<button onClick={onChangeLanguage('en')} value='' defaultChecked = { locale === 'es' }>
-						<div className="flex gap-2">
+						<div className="flex gap-2 uppercase">
 							{locale}
-							<Image
-								src={English.src}
-								width={24}
-								height={24}
-								alt={ defaultLang ? 'Ícono idioma inglés' : 'English flag icon' } 
-								loading="lazy"
-							/>
 						</div>
 					</button>
 					:
 					<button onClick={onChangeLanguage('es')} value='' defaultChecked = { locale === 'es' }>
-						<div className="flex gap-2">
+						<div className="flex gap-2 uppercase">
 							{locale}
-							<Image
-								src={Spanish.src}
-								width={24}
-								height={24}
-								alt={ defaultLang ? 'Ícono idioma español' : 'Spanish flag icon' } 
-								loading="lazy"                  />
 						</div>
 					</button>
 				}

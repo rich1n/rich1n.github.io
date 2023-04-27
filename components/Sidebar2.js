@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import DarkMode from './layouts/DarkMode';
 import NavLinks from "@/data/NavLinks"
 import FooterSidebar from './layouts/FooterSidebar';
 import Image from 'next/image';
@@ -43,33 +42,29 @@ export default function Sidebar2() {
       </div>
         <nav className="" >
           <div className="text-base leading-5">
-            {/**
-             * Spanish English Language Button & Dark Mode Toggle Button
-             */}
 							<div className='flex justify-center'>
 									{ defaultLang ?
 										<button onClick={onChangeLanguage('en')} value='' defaultChecked = { locale === 'es' }>
-												<Image
-													src={English.src}
-													width={24}
-													height={24}
-													alt={ defaultLang ? 'Ícono idioma inglés' : 'English flag icon' } 
-													loading="lazy"
-												/>
+											<Image
+												src={English.src}
+												width={24}
+												height={24}
+												alt={ defaultLang ? 'Ícono idioma inglés' : 'English flag icon' } 
+												loading="lazy"
+											/>
 										</button>
 										:
 										<button onClick={onChangeLanguage('es')} value='' defaultChecked = { locale === 'es' }>
-												<Image
-													src={Spanish.src}
-													width={24}
-													height={24}
-													alt={ defaultLang ? 'Ícono idioma español' : 'Spanish flag icon' } 
-													loading="lazy"                  />
+											<Image
+												src={Spanish.src}
+												width={24}
+												height={24}
+												alt={ defaultLang ? 'Ícono idioma español' : 'Spanish flag icon' } 
+												loading="lazy"                  
+											/>
 										</button>
 									}
 							</div>
-
-
 							<button
 								aria-label="Toggle Dark Mode"
 								type="button"
@@ -90,8 +85,7 @@ export default function Sidebar2() {
             <div className="my-6">
               {NavLinks.map((link) => (
                 <Link
-
-                  className="flex flex-row font-medium  hover:bg-gray-600 duration-500 text-gray-900 dark:text-gray-100 sm:p-4"
+                  className="flex flex-row font-medium hover:bg-gray-600 duration-500 text-gray-900 dark:text-gray-100 sm:p-4"
                   key={link.title}
                   href={link.href}
                 >
@@ -100,7 +94,6 @@ export default function Sidebar2() {
 										width={25}
 										height={25}
 										alt="logo"
-
 									/>
                 </Link>
               ))}

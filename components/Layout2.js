@@ -12,16 +12,13 @@ export default function Layout({ children, title = '', description = '', home })
 				<title>{title}</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-				{/**
-				 * Sidebar + Main Section
-				 */}
-
-                <div className="w-14 sticky">
-                    <Sidebar2 />
-                </div>
-				 	<Spacer />
-					<main className="w-full">{children}</main>
-				<Footer />
+				{/* Sidebar + Main Section */}
+			<div className="w-14 sticky">
+				<Sidebar2 />
+			</div>
+			<Spacer />
+			<main className="w-full">{children}</main>
+			<Footer />
 		</>
 	)
 }

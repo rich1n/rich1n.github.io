@@ -20,13 +20,6 @@ export default function Navbar() {
       </div>
         <nav className="flex flex-row items-start relative px-4 md:px-0 pb-0 fade md:relative" >
           <div className="text-base leading-5">
-            {/**
-             * Spanish English Language Button & Dark Mode Toggle Button
-             */}
-            <div className='flex'>
-              <LangBar />
-              <DarkMode />
-            </div>
               {/**
               * Nav Link Bar
               */}
@@ -42,6 +35,11 @@ export default function Navbar() {
               ))}
             </div>
             <FooterSidebar />
+            <div className='text-center'>
+              <LangBar />
+              <DarkMode />
+            </div>
+
           </div>
         </nav>
       </div>

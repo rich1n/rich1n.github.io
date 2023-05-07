@@ -4,8 +4,8 @@ export default function about() {
   return (
     <>
         <Layout>
-            <div className="border-2">
-                .
+            <div>
+              
             </div>    
         </Layout>        
     </>

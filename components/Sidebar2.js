@@ -33,11 +33,11 @@ export default function Sidebar2() {
   return (
     <aside className='hidden sm:block'>
       <div className="lg:sticky lg:top-20">
-      <div className="text-center mb-2 md:my-8 space-y-10">
+      <div className="text-center my-4 md:my-8 space-y-10">
         <Link
 					href="/"
 				>
-					L
+					R.
 				</Link>
       </div>
         <nav className="" >

@@ -2,7 +2,7 @@
 export default function Header() {
   return (
     <>
-    <div className="my-3  ">
+    <div className="my-3">
         <div>
             <marquee>Header</marquee>
         </div>

@@ -6,10 +6,10 @@ export default function FooterBar() {
 	const defaultLang = locale === 'es'
 
 	return (
-		<div className="mx-auto mt-16 flex flex-col items-center">
+		<div className="mx-auto mt-16 flex flex-col">
 			<div>
 				<button 
-					className="ml-1 mr-1 rounded p-1 sm:ml-4 hover:bg-gray-600 duration-500"
+					className="ml-2 rounded p-1 hover:bg-gray-600 duration-500"
 					type="button" 
 					aria-label="Subscribe Button"
 				>

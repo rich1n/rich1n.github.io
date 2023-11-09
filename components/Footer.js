@@ -14,18 +14,11 @@ const components = {
   twitter: Twitter,
 }
 
-export default function Footer({ kind, href, size = 8 }) {
-  if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
-    return null
-
-    const SocialSvg = components[kind]
-    console.log(kind)
-    console.log('mail')
-
-return (
+export default function Footer() {
+  return (
     <footer>
       <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4 text-white">
+        <div className="mb-3 flex space-x-4">
 {/*
           <a
             className="text-sm text-gray-500 transition hover:text-gray-600"
@@ -53,7 +46,7 @@ return (
           </a>
         </div>
         <hr className='border border-gray-600 w-2/3 md:w-1/3 mb-4'/>
-        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-2 flex space-x-2 text-sm text-gray-200 dark:text-gray-200">
           <div>{siteMetadata.author}</div>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
@@ -61,8 +54,8 @@ return (
           <Link href="/">{siteMetadata.title}</Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
-          <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
-            Developed at Home and fully remote
+          <Link href="https://github.com/rich1n" target='_blank'>
+            Developed in Hamburg and fully remote
           </Link>
         </div>
       </div>

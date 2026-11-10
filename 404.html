@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada | rich1n</title>
+  <meta name="description" content="Esta página no existe.">
+  <meta name="theme-color" content="#1C1A19">
+  <link rel="canonical" href="https://rich1n.com/404.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Página no encontrada | rich1n">
+  <meta property="og:description" content="Esta página no existe.">
+  <meta property="og:image" content="https://rich1n.com/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="/" aria-label="rich1n, inicio">
+        <svg class="icon" aria-hidden="true"><use href="/assets/icons/sprite.svg#bean"/></svg>
+        rich1n
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="/cafe/">Café</a>
+        <a href="/#contacto">Contacto</a>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="/assets/icons/sprite.svg#moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="/assets/icons/sprite.svg#sun"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="page-title">404 · <span>Taza vacía</span></h1>
+    <p class="section__lead">La página que buscas no existe o se ha movido.</p>
+    <ul class="cards">
+      <li><a class="card card--burgundy" href="/"><svg class="icon" aria-hidden="true"><use href="/assets/icons/sprite.svg#cup"/></svg><span class="card__body"><span class="card__title">Volver al inicio</span><span class="card__desc">Servirte otra taza.</span></span></a></li>
+      <li><a class="card card--brown" href="/cafe/"><svg class="icon" aria-hidden="true"><use href="/assets/icons/sprite.svg#book"/></svg><span class="card__body"><span class="card__title">Ir al Café</span><span class="card__desc">Artículos, recetas y más.</span></span></a></li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <svg class="icon" aria-hidden="true"><use href="/assets/icons/sprite.svg#bean"/></svg>
+    <p>© <span data-year>2026</span> <a href="/">rich1n</a> · Richard Alexander</p>
+    <p>Hecho con ☕ y ♥ · <a href="https://github.com/rich1n" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

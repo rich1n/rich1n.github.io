@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Tile de granos de café. Se usa como CSS mask: lo opaco toma el color del tema. -->
+  <defs>
+    <ellipse id="shape" rx="7" ry="10.5"/>
+    <path id="groove" d="M2.2 -10.2c-3.2 3.4-.4 6.8-2.2 10.2s1 6.8-2.2 10.2" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round"/>
+    <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="120" height="120">
+      <rect width="120" height="120" fill="#fff"/>
+      <use href="#groove" transform="translate(26 28) rotate(25)"/>
+      <use href="#groove" transform="translate(88 38) rotate(-40) scale(.85)"/>
+      <use href="#groove" transform="translate(52 90) rotate(70)"/>
+      <use href="#groove" transform="translate(102 102) rotate(10) scale(.7)"/>
+    </mask>
+  </defs>
+  <g fill="#000" mask="url(#cut)">
+    <use href="#shape" transform="translate(26 28) rotate(25)"/>
+    <use href="#shape" transform="translate(88 38) rotate(-40) scale(.85)"/>
+    <use href="#shape" transform="translate(52 90) rotate(70)"/>
+    <use href="#shape" transform="translate(102 102) rotate(10) scale(.7)"/>
+  </g>
+</svg>

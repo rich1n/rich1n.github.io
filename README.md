@@ -1,38 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# rich1n.com
 
-## Getting Started
+Sitio personal de **Richard Alexander**, barista y production roaster. Está hecho con HTML, CSS y JavaScript puros (sin build) y se publica con GitHub Pages en [rich1n.com](https://rich1n.com).
 
-First, run the development server:
+## Estructura
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+index.html            Inicio: perfil, café, recursos y contacto
+cafe/index.html       Listado de publicaciones con filtros
+cafe/post.html        Visor de publicaciones (post.html?slug=...)
+cafe/posts.json       Índice de publicaciones
+cafe/posts/*.md       Contenido de cada publicación (Markdown)
+assets/css/styles.css Estilos y paleta (tokens en :root)
+assets/js/main.js     Tema claro/oscuro, año y copiar email
+assets/js/cafe.js     Listados y render de posts
+assets/icons/sprite.svg  Iconos
+assets/img/           Avatar, imagen para redes e infografías
+CNAME                 Dominio personalizado para GitHub Pages
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Publicar algo nuevo en el Café
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. Crea el archivo `cafe/posts/mi-nuevo-post.md`. El nombre solo puede tener minúsculas, números y guiones. Empieza con un título `# ...`.
+2. Añádelo al principio de `cafe/posts.json`:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```json
+   {
+     "slug": "mi-nuevo-post",
+     "title": "Título del post",
+     "type": "receta",
+     "date": "2026-12-01",
+     "excerpt": "Una frase que resuma el post."
+   }
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   `type` puede ser `articulo`, `receta`, `recomendacion` o `infografia`.
+3. Las imágenes van en `assets/img/` y se enlazan desde el Markdown así: `![Descripción](../assets/img/mi-imagen.png)`.
+4. (Opcional) Añade la URL a `sitemap.xml`.
+5. Haz commit y push. GitHub Pages lo publica en uno o dos minutos.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Los posts que vienen incluidos son ejemplos: edítalos o bórralos (y quítalos de `posts.json`).
 
-## Learn More
+## Personalizar
 
-To learn more about Next.js, take a look at the following resources:
+- **Foto**: guarda tu foto como `assets/img/avatar.jpg` (cuadrada, unos 400×400 px) y cambia el `src` del avatar en `index.html`.
+- **Bio, redes y email**: están en `index.html`.
+- **Colores**: son los tokens del principio de `assets/css/styles.css`.
+- **"Invítame a un café"**: cambia el enlace en `index.html` por tu Ko-fi, Buy Me a Coffee o PayPal, o borra ese bloque.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Probar en local
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Los posts se cargan con `fetch`, así que hay que abrir la web desde un servidor, no con doble clic:
 
-## Deploy on Vercel
+```bash
+npx serve .
+# o bien
+python -m http.server 8000
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Publicar en GitHub Pages con rich1n.com
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Crea un repositorio público en GitHub (por ejemplo, `rich1n/rich1n.com`) y sube este código a la rama `main`.
+2. Ve a **Settings → Pages → Build and deployment**, elige **Deploy from a branch** con `main` y la carpeta `/ (root)`.
+3. En **Custom domain** escribe `rich1n.com` (el archivo `CNAME` ya lo incluye).
+4. En el panel DNS de tu proveedor del dominio, crea estos registros:
+
+   | Tipo  | Nombre | Valor               |
+   |-------|--------|---------------------|
+   | A     | @      | 185.199.108.153     |
+   | A     | @      | 185.199.109.153     |
+   | A     | @      | 185.199.110.153     |
+   | A     | @      | 185.199.111.153     |
+   | CNAME | www    | rich1n.github.io    |
+
+5. Cuando el DNS propague (de minutos a unas horas), activa **Enforce HTTPS** en Settings → Pages.

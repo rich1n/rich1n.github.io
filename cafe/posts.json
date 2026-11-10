@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "guia-v60",
+    "title": "Guía V60 paso a paso",
+    "type": "receta",
+    "date": "2026-11-10",
+    "excerpt": "Mi receta base para un V60 limpio y dulce: 15 g de café, 250 g de agua y tres minutos."
+  },
+  {
+    "slug": "que-pasa-durante-el-tueste",
+    "title": "Qué pasa durante el tueste",
+    "type": "articulo",
+    "date": "2026-11-08",
+    "excerpt": "Secado, Maillard, primer crack y desarrollo: las fases que convierten un grano verde en café."
+  },
+  {
+    "slug": "cafeteras-para-casa",
+    "title": "3 cafeteras para empezar en casa",
+    "type": "recomendacion",
+    "date": "2026-11-05",
+    "excerpt": "Tres métodos sencillos y asequibles para preparar buen café sin una máquina de espresso."
+  },
+  {
+    "slug": "rueda-de-sabores",
+    "title": "Rueda de sabores del café",
+    "type": "infografia",
+    "date": "2026-11-01",
+    "excerpt": "Una guía visual para ponerle nombre a lo que sientes en la taza."
+  }
+]

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rich1n.com/sitemap.xml

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rich1n | Richard Alexander · Barista y Production Roaster</title>
+  <meta name="description" content="Soy Richard Alexander, barista y production roaster. Comparto artículos, recetas, recomendaciones e infografías sobre café.">
+  <meta name="theme-color" content="#1C1A19">
+  <link rel="canonical" href="https://rich1n.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rich1n.com/">
+  <meta property="og:title" content="rich1n | Richard Alexander · Barista y Production Roaster">
+  <meta property="og:description" content="Artículos, recetas, recomendaciones e infografías sobre café.">
+  <meta property="og:image" content="https://rich1n.com/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="./" aria-label="rich1n, inicio">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#bean"/></svg>
+        rich1n
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="cafe/">Café</a>
+        <a href="#contacto">Contacto</a>
+        <button class="theme-toggle" type="button" data-theme-toggle>
+          <svg class="icon icon-moon" aria-hidden="true"><use href="assets/icons/sprite.svg#moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="assets/icons/sprite.svg#sun"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Perfil ===== -->
+    <section class="hero" aria-labelledby="nombre">
+      <div class="hero__top">
+        <div class="avatar">
+          <!-- Cuando tengas tu foto: guárdala como assets/img/avatar.jpg y cambia el src -->
+          <img src="assets/img/avatar.svg" alt="Avatar de Richard Alexander" width="96" height="96">
+        </div>
+        <div>
+          <h1 class="hero__name" id="nombre">Richard Alexander</h1>
+          <p class="hero__handle">@rich1n</p>
+          <ul class="socials" aria-label="Redes sociales">
+            <li><a href="https://github.com/rich1n" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#github"/></svg></a></li>
+            <li><a href="https://instagram.com/rich1n" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#instagram"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/rich1n" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin"/></svg></a></li>
+            <li><a href="mailto:ricard122@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="stats">
+        <li><strong>2000</strong><span>mi primer café</span></li>
+        <li><strong>26+</strong><span>años en el café</span></li>
+        <li><strong>Barista</strong><span>&amp; production roaster</span></li>
+      </ul>
+
+      <div class="bio">
+        <p>Soy Richard Alexander, <strong>barista</strong> y <strong>production roaster</strong>. Mi historia con el café empezó en el año 2000 y desde entonces no he dejado de aprender de él: del grano verde al tueste, de la extracción a la taza.</p>
+        <p>Me apasiona toda la cadena del café y la gente que la hace posible. Lo que más disfruto de mi trabajo es ese momento en que alguien prueba lo que preparé y algo cambia: se le mejora el ánimo, se le ilumina el día, le devuelve la vida.</p>
+        <p>Aquí comparto lo que aprendo: artículos, recetas, recomendaciones e infografías para que tú también disfrutes cada taza. Bienvenido. ☕</p>
+      </div>
+    </section>
+
+    <!-- ===== Café ===== -->
+    <section class="section" id="cafe" aria-labelledby="cafe-title">
+      <h2 class="section__title" id="cafe-title">Café</h2>
+      <ul class="cards cards--2">
+        <li>
+          <a class="card card--brown" href="cafe/?type=articulo">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#book"/></svg>
+            <span class="card__body"><span class="card__title">Artículos</span><span class="card__desc">Origen, tueste y todo lo que hay detrás de una taza.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card card--burgundy" href="cafe/?type=receta">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#recipe"/></svg>
+            <span class="card__body"><span class="card__title">Recetas</span><span class="card__desc">Métodos y proporciones para preparar en casa.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card card--beige" href="cafe/?type=recomendacion">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#star"/></svg>
+            <span class="card__body"><span class="card__title">Recomendaciones</span><span class="card__desc">Cafés, equipos y lugares que me han gustado.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card card--gray" href="cafe/?type=infografia">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#chart"/></svg>
+            <span class="card__body"><span class="card__title">Infografías</span><span class="card__desc">El café explicado de un vistazo.</span></span>
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="section__subtitle">Lo último <span>recién molido</span></h3>
+      <ul class="cards" data-posts data-base="cafe/" data-sprite="assets/icons/sprite.svg" data-limit="3"></ul>
+    </section>
+
+    <!-- ===== Recursos ===== -->
+    <section class="section" aria-labelledby="recursos-title">
+      <h2 class="section__title" id="recursos-title">Recursos y más</h2>
+      <ul class="cards">
+        <li>
+          <a class="card card--outline" href="https://instagram.com/rich1n" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#instagram"/></svg>
+            <span class="card__body"><span class="card__title">Instagram</span><span class="card__desc">El día a día detrás de la barra y el tostador.</span></span>
+          </a>
+        </li>
+        <li>
+          <a class="card card--outline" href="https://github.com/rich1n" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#code"/></svg>
+            <span class="card__body"><span class="card__title">GitHub</span><span class="card__desc">El código de esta web y otros proyectos.</span></span>
+          </a>
+        </li>
+        <!-- "Invítame a un café": cambia el href por tu enlace (Ko-fi, Buy Me a Coffee, PayPal…) o borra este bloque -->
+        <li>
+          <a class="card card--beige" href="#contacto">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#cup"/></svg>
+            <span class="card__body"><span class="card__title">Invítame a un café</span><span class="card__desc">Si te gusta lo que comparto, ayúdame a seguir tostando.</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <h2 class="section__title" id="contacto-title">Contacto</h2>
+      <p class="section__lead">¿Colaboraciones, asesorías, catas o simplemente hablar de café? Escríbeme.</p>
+      <ul class="cards">
+        <li class="contact-row">
+          <a class="card card--burgundy" href="mailto:ricard122@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#mail"/></svg>
+            <span class="card__body"><span class="card__title">ricard122@gmail.com</span><span class="card__desc">Te respondo lo antes posible.</span></span>
+          </a>
+          <button class="card card--beige copy-btn" type="button" data-copy="ricard122@gmail.com" aria-label="Copiar email" title="Copiar email">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#copy"/></svg>
+          </button>
+        </li>
+        <li>
+          <a class="card card--brown" href="https://www.linkedin.com/in/rich1n" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin"/></svg>
+            <span class="card__body"><span class="card__title">LinkedIn</span><span class="card__desc">Mi trayectoria profesional en el café.</span></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <svg class="icon" aria-hidden="true"><use href="assets/icons/sprite.svg#bean"/></svg>
+    <p>© <span data-year>2026</span> <a href="./">rich1n</a> · Richard Alexander</p>
+    <p>Hecho con ☕ y ♥ · <a href="https://github.com/rich1n" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/cafe.js" defer></script>
+</body>
+</html>

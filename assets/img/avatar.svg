@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Avatar provisional: reemplázalo por assets/img/avatar.jpg cuando tengas tu foto -->
+  <rect width="200" height="200" fill="#8B5E3C"/>
+  <circle cx="160" cy="40" r="70" fill="#7B1E2B" opacity=".55"/>
+  <g fill="none" stroke="#F3EBDD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 120h62v16a26 26 0 0 1-26 26h-10a26 26 0 0 1-26-26z"/>
+    <path d="M124 126h7a10 10 0 0 1 0 20h-7"/>
+    <path d="M78 98c-4 5 4 9 0 15M93 98c-4 5 4 9 0 15M108 98c-4 5 4 9 0 15"/>
+  </g>
+  <text x="100" y="72" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="44" fill="#F3EBDD">RA</text>
+</svg>
